@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700,800,800i,900i&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
+.container {
+  margin: 24px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1008px) {
+  .container {
+    margin: 32px 128px;
+  }
+}
+
+.container .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1008px) {
+  .container .section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-position: center center;
+  background-size: cover;
+}
+
+.container .item .lay {
+  height: 250px;
+}
+
+@media (min-width: 640px) {
+  .container .item .lay {
+    height: 350px;
+  }
+}
+
+@media (min-width: 1008px) {
+  .container .item .lay {
+    height: 400px;
+  }
+}
+
+.container .item .overlay {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: white;
+  height: 30%;
+  padding: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 100vw;
+}
+
+.container .item .overlay h6 {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1008px) {
+  .container .item .overlay h6 {
+    font-size: 2rem;
+  }
+}
+
+.container .item .overlay p {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1008px) {
+  .container .item .overlay p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1008px) {
+  .container .item .overlay {
+    max-width: 40vw;
+    min-width: 30vw;
+    height: 100px;
+  }
+}
+/*# sourceMappingURL=Projects.module.css.map */
