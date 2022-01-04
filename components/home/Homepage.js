@@ -33,7 +33,7 @@ const Homepage = () => {
 					subHeading='Contact Us'
 					btnText='Contact Us Today'
 					href='/contact'>
-					We{`'`}re passionate about design, innovation, brilliant ideas and the
+					{`We're`} passionate about design, innovation, brilliant ideas and the
 					execution that brings it all together in one beautiful experience. If
 					you are too, call or send us an email to get started.
 				</SectionHeading>
