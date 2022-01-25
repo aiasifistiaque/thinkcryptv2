@@ -14,7 +14,9 @@ const Homepage = () => {
 				<Hero />
 				<SectionHeading
 					heading='Meticulously Designed'
-					subHeading='Featured Web Projects'>
+					subHeading='Featured Web Projects'
+					btnText='View Our Portfolio'
+					href='/portfolio'>
 					We take pride in all of our designs. Everything is meticulously
 					researched, planned, tested and designed to work and look flawlessly.
 				</SectionHeading>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './SectionHeading.module.css';
+import Link from 'next/link';
 
 const SectionHeading = ({ subHeading, heading, children, btnText, href }) => {
 	return (
@@ -18,9 +19,11 @@ const SectionHeading = ({ subHeading, heading, children, btnText, href }) => {
 				<div className={styles.right}>
 					<p>{children}</p>
 					{href && (
-						<div className={styles.button}>
-							<p>{btnText}</p>
-						</div>
+						<Link href={href}>
+							<div className={styles.button}>
+								<p>{btnText}</p>
+							</div>
+						</Link>
 					)}
 				</div>
 			</div>

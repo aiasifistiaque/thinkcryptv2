@@ -37,6 +37,7 @@
 }
 
 .container .item {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

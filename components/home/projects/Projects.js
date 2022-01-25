@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Projects.module.css';
 import data from './data.js';
+import Link from 'next/link';
 
 const Projects = () => {
 	return (
@@ -23,16 +24,18 @@ const Projects = () => {
 
 const Project = ({ item }) => {
 	return (
-		<div
-			className={styles.item}
-			style={{ backgroundImage: `url(${item.src}.jpg)` }}>
-			{/* <img src={`${item.src}.jpg`} alt={item.name} /> */}
-			<div className={styles.lay} />
-			<div className={styles.overlay}>
-				<h6>{item.name}</h6>
-				<p>{item.type}</p>
+		<Link href='/project'>
+			<div
+				className={styles.item}
+				style={{ backgroundImage: `url(${item.src}.jpg)` }}>
+				{/* <img src={`${item.src}.jpg`} alt={item.name} /> */}
+				<div className={styles.lay} />
+				<div className={styles.overlay}>
+					<h6>{item.name}</h6>
+					<p>{item.type}</p>
+				</div>
 			</div>
-		</div>
+		</Link>
 	);
 };
 
