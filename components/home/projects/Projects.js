@@ -24,18 +24,19 @@ const Projects = () => {
 
 const Project = ({ item }) => {
 	return (
-		<Link href='/project'>
-			<div
-				className={styles.item}
-				style={{ backgroundImage: `url(${item.src}.jpg)` }}>
-				{/* <img src={`${item.src}.jpg`} alt={item.name} /> */}
-				<div className={styles.lay} />
-				<div className={styles.overlay}>
-					<h6>{item.name}</h6>
-					<p>{item.type}</p>
-				</div>
+		<a
+			target='_blank'
+			href={item.href}
+			rel='noopener noreferrer'
+			className={styles.item}
+			style={{ backgroundImage: `url(${item.src}.jpg)` }}>
+			{/* <img src={`${item.src}.jpg`} alt={item.name} /> */}
+			<div className={styles.lay} />
+			<div className={styles.overlay}>
+				<h6>{item.name}</h6>
+				<p>{item.type}</p>
 			</div>
-		</Link>
+		</a>
 	);
 };
 

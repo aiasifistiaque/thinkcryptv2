@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Page.module.css';
 import Head from 'next/head';
 import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 
 const Page = ({ children }) => {
 	return (
@@ -28,6 +29,7 @@ const Page = ({ children }) => {
 					key='ogsitename'
 				/>
 			</Head>
+			<Header />
 			<main className={styles.container}>{children}</main>
 			<Footer />
 		</>

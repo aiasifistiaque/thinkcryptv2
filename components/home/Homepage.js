@@ -34,6 +34,7 @@ const Homepage = () => {
 					heading='Let’s design your next project'
 					subHeading='Contact Us'
 					btnText='Contact Us Today'
+					to='/https://docs.google.com/forms/d/e/1FAIpQLSeu0GxkeIBfjuAXlPALET-5S1Dxs6JASbV2CSjv2Yv4YA1vZQ/viewform?usp=sf_link'
 					href='/contact'>
 					{`We're`} passionate about design, innovation, brilliant ideas and the
 					execution that brings it all together in one beautiful experience. If
