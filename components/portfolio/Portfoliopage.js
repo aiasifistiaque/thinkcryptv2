@@ -81,7 +81,7 @@ const data2 = [
 const Portfoliopage = () => {
 	return (
 		<Page>
-			<div className={styles.container}>
+			<div className={styles.container} style={{ marginTop: 64 }}>
 				<SectionHeading heading='All of Our Work' subHeading='Our Projects'>
 					We{`'`}re passionate about design, innovation, brilliant ideas and the
 					execution that brings it all together in one beautiful experience. If

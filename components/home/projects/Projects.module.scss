@@ -4,6 +4,7 @@
 	margin: 24px 0;
 	display: flex;
 	flex-direction: column;
+	gap: 2rem;
 
 	@include desktop {
 		margin: 32px 128px;
@@ -12,6 +13,7 @@
 	.section {
 		display: flex;
 		flex-direction: column;
+		gap: 2rem;
 		@include desktop {
 			flex-direction: row;
 		}
@@ -25,7 +27,7 @@
 		background-size: cover;
 
 		.lay {
-			height: 250px;
+			height: 400px;
 
 			@include tab {
 				height: 350px;
