@@ -9,7 +9,7 @@ const PortfolioItem = ({ item, href }) => {
 			href={item.href}
 			rel='noopener noreferrer'
 			className={styles.container}>
-			<img src={`${item.src}.jpg`} alt={item.name} />
+			<img src={`${item.src}`} alt={item.name} />
 			<div className={styles.text}>
 				<h6>{item.name}</h6>
 				<p>{item.type}</p>

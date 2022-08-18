@@ -8,10 +8,12 @@
 		width: 100%;
 		height: 300px;
 		object-fit: contain;
+		background-color: whitesmoke;
+
 		@include desktop {
 			width: 500px;
 			height: 350px;
-			object-fit: cover;
+			object-fit: contain;
 		}
 	}
 	margin-bottom: 32px;
