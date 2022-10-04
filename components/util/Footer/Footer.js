@@ -31,19 +31,27 @@ const data = [
 
 const Footer = () => {
 	return (
-		<div className={styles.container}>
-			<div className={styles.sections}>
-				<div className={styles.section}>
-					<h6>Contact Us</h6>
-					<p>Tel: (+88) 01828398225, 01799399555</p>
-					<p>Email: info@thinkcrypt.io</p>
-					<p>Mohammadpur, Dhaka, Bangladesh</p>
+		<div className={styles.foot}>
+			<div className={styles.container}>
+				<div className={styles.sections}>
+					<div className={styles.section}>
+						<h6>Contact Us</h6>
+						<p>Tel: (+88) 01828398225, 01799399555</p>
+						<p>Email: info@thinkcrypt.io</p>
+						<p>Mohammadpur, Dhaka, Bangladesh</p>
+					</div>
+					<div className={styles.rightSections}>
+						{data.map((item, i) => (
+							<Section data={item} key={i} />
+						))}
+					</div>
 				</div>
-				<div className={styles.rightSections}>
-					{data.map((item, i) => (
-						<Section data={item} key={i} />
-					))}
-				</div>
+			</div>
+			<div className={styles.disclaimer}>
+				<p>
+					{`©2022`}, TestMate Ltd. - thinkcrypt.io is a concern of TestMate Ltd.
+					registered under RJSC, Bangladesh
+				</p>
 			</div>
 		</div>
 	);

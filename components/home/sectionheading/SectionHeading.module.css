@@ -1,85 +1,54 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700,800,800i,900i&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   min-height: 50vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 24px;
   letter-spacing: 0.5px;
 }
-
 @media (min-width: 1008px) {
   .container {
     margin: 128px;
   }
 }
-
 .container .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 @media (min-width: 1008px) {
   .container .row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
-
 .container .row .left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1;
+  align-self: flex-start;
   display: flex;
   width: 100%;
 }
-
 @media (min-width: 1008px) {
   .container .row .left {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
     margin-left: 32px;
   }
 }
-
 .container .row .left h5 {
   font-size: 1.2rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   max-width: 60vw;
 }
-
 .container .row .right {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
 }
-
 .container .row .right h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 2rem;
   line-height: 2.5rem;
   letter-spacing: 2px;
   margin-top: 0.5rem;
 }
-
 @media (min-width: 1008px) {
   .container .row .right h2 {
     font-size: 3.75rem;
@@ -87,77 +56,60 @@
     margin-top: 0;
   }
 }
-
 .container .row .right p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   letter-spacing: 1px;
   line-height: 1.6;
 }
-
 @media (min-width: 1008px) {
   .container .row .right p {
     letter-spacing: 2px;
     line-height: 1.8;
   }
 }
-
 .container .row .right .button {
   cursor: pointer;
   margin: 32px 0;
   height: 50px;
   width: 220px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: #7dbcf3;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
-
 .container .row .right .button p {
   line-height: 0;
   color: white;
   font-weight: bold;
   letter-spacing: 0.75px;
 }
-
 @media (min-width: 1008px) {
   .container .row .right .button:hover {
     background-color: #4ea4ef;
   }
 }
-
 .container .row .right .button:active {
   background-color: #acd4f7;
 }
-
 .container .row .right .border {
   height: 10px;
   width: 80px;
   background-color: #7dbcf3;
   margin: 1.5rem 0 1.5rem 0;
 }
-
 @media (min-width: 1008px) {
   .container .row .right .border {
     margin: 1rem 0 2rem 0;
   }
 }
-
 @media (min-width: 1008px) {
   .container .row .right {
     margin: 0 128px;
   }
-}
-/*# sourceMappingURL=SectionHeading.module.css.map */
+}/*# sourceMappingURL=SectionHeading.module.css.map */

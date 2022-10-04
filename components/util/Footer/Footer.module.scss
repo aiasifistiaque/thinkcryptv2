@@ -6,6 +6,25 @@
 	}
 }
 
+.foot {
+	background-color: #f2f2f2;
+}
+
+.disclaimer {
+	align-items: center;
+	justify-content: center;
+	padding: 4px 16px;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	p {
+		text-align: center;
+		color: #424242;
+		font-size: 12px;
+	}
+}
+
 .container {
 	background-color: #f2f2f2;
 	display: flex;

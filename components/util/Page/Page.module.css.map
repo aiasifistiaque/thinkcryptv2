@@ -1,12 +1,1 @@
-{
-    "version": 3,
-    "mappings": "ACAA,OAAO,CAAC,0GAAI;AACZ,OAAO,CAAC,2HAAI;ADCZ,AAAA,UAAU,CAAC;EACV,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,KAAK;EAChB,UAAU,EAAE,KAAK;EACjB,IAAI,EAAE,CAAC;CACP",
-    "sources": [
-        "Page.module.scss",
-        "../../../styles/_imports.scss",
-        "../../../styles/utilities/_mixins.scss",
-        "../../../styles/utilities/_partials.scss"
-    ],
-    "names": [],
-    "file": "Page.module.css"
-}
+{"version":3,"sources":["../../../styles/_imports.scss","Page.module.scss","Page.module.css"],"names":[],"mappings":"AAAQ,kHAAA;AACA,mIAAA;ACCR;EACC,aAAA;EACA,gBAAA;EACA,iBAAA;EACA,OAAA;ACCD","file":"Page.module.css"}
