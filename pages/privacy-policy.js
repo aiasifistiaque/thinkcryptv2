@@ -1,7 +1,7 @@
 import React from 'react';
 import Page from '../components/util/Page/Page';
 
-import { Flex, Heading } from '@chakra-ui/react';
+import { Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import { breakpoints } from '../components/lib/constants';
 
