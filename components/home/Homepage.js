@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './Homepage.module.css';
 import Hero from './hero/Hero';
 import Page from '../util/Page/Page';
 import SectionHeading from './sectionheading/SectionHeading';
@@ -7,10 +6,20 @@ import Projects from './projects/Projects';
 import Services from './services/Services';
 import Testimonial from './testimonial/Testimonial';
 
+import { Flex } from '@chakra-ui/react';
+import styled from '@emotion/styled';
+
+const Container = styled(Flex)`
+	flex: 1;
+	flex-direction: column;
+	max-width: 100vw;
+	box-sizing: border-box;
+`;
+
 const Homepage = () => {
 	return (
 		<Page>
-			<div className={styles.container}>
+			<Container>
 				<Hero />
 				<SectionHeading
 					heading='Meticulously Designed'
@@ -40,7 +49,7 @@ const Homepage = () => {
 					execution that brings it all together in one beautiful experience. If
 					you are too, call or send us an email to get started.
 				</SectionHeading>
-			</div>
+			</Container>
 		</Page>
 	);
 };

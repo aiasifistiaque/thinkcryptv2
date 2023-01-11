@@ -4,6 +4,16 @@ import Head from 'next/head';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
+import { Flex } from '@chakra-ui/react';
+import styled from '@emotion/styled';
+
+const Container = styled('main')`
+	display: flex;
+	max-width: 100vw;
+	min-height: 100vh;
+	flex: 1;
+`;
+
 const Page = ({ children }) => {
 	return (
 		<>
@@ -30,7 +40,7 @@ const Page = ({ children }) => {
 				/>
 			</Head>
 			<Header />
-			<main className={styles.container}>{children}</main>
+			<Container>{children}</Container>
 			<Footer />
 		</>
 	);
