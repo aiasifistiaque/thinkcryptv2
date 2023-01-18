@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './SectionHeading.module.css';
 import Link from 'next/link';
 import { Title, Subtitle, Text, Container, Row, Right, Left } from './styles';
 
-import { Flex, Text as BText, Center, Link as CLink } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import { breakpoints, colors, links } from '../../lib/constants';
 
@@ -16,31 +17,6 @@ const Divider = styled(Flex)`
 	}
 `;
 
-const ThinkButton = styled(Center)`
-	cursor: pointer;
-	margin: 32px 0;
-	height: 50px;
-	width: 220px;
-	background-color: ${colors.primary};
-	transition: 0.2s;
-	&:hover {
-		@media (min-width: ${breakpoints.desktop}) {
-			background-color: ${colors.primaryDark};
-		}
-	}
-	&:active {
-		background-color: ${colors.primaryLight};
-	}
-`;
-
-const ButtonText = styled(BText)`
-	line-height: 0;
-	color: white;
-	font-weight: bold;
-	letter-spacing: 0.75px;
-	font-size: 1rem;
-`;
-
 const SectionHeading = ({
 	subHeading,
 	heading,
@@ -50,6 +26,15 @@ const SectionHeading = ({
 	to,
 	F,
 }) => {
+	const cotactButtom = (
+		<a
+			target='_blank'
+			href={links.contact}
+			rel='noopener noreferrer'
+			className={styles.button}>
+			<p>{btnText}</p>
+		</a>
+	);
 	const top = (
 		<>
 			<Left>
@@ -61,29 +46,20 @@ const SectionHeading = ({
 			</Right>
 		</>
 	);
-
-	const cotactButtom = (
-		<CLink isExternal href={links.contact}>
-			<ThinkButton>
-				<ButtonText>{btnText}</ButtonText>
-			</ThinkButton>
-		</CLink>
-	);
-
-	const btn = href && (
-		<Link href={href}>
-			<ThinkButton>
-				<ButtonText>{btnText}</ButtonText>
-			</ThinkButton>
-		</Link>
-	);
-
 	const bottom = (
 		<>
 			<Left />
 			<Right>
 				<Text>{children}</Text>
-				{to ? cotactButtom : btn}
+				{to
+					? cotactButtom
+					: href && (
+							<Link href={href}>
+								<div className={styles.button}>
+									<p>{btnText}</p>
+								</div>
+							</Link>
+					  )}
 			</Right>
 		</>
 	);

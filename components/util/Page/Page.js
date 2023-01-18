@@ -1,7 +1,10 @@
 import React from 'react';
+import styles from './Page.module.css';
 import Head from 'next/head';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+
+import { Flex } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 
 const Container = styled('main')`
@@ -11,11 +14,11 @@ const Container = styled('main')`
 	flex: 1;
 `;
 
-const Page = ({ children, title }) => {
+const Page = ({ children }) => {
 	return (
 		<>
 			<Head>
-				<title>{title || 'thinkcrypt.io'}</title>
+				<title>thinkcrypt.io</title>
 				<meta property='title' content='thinkcrypt.io' />
 				<link rel='icon' href='/favicon.ico' />
 

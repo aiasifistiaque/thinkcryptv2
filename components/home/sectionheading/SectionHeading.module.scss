@@ -1,0 +1,105 @@
+@import '../../../styles/imports';
+
+.container {
+	display: flex;
+	min-height: 50vh;
+	flex-direction: column;
+	margin: 24px;
+	letter-spacing: 0.5px;
+
+	@include desktop {
+		margin: 128px;
+	}
+	.row {
+		display: flex;
+		flex-direction: column;
+		@include desktop {
+			flex-direction: row;
+		}
+
+		.left {
+			flex: 1;
+			align-self: flex-start;
+			display: flex;
+			width: 100%;
+
+			@include desktop {
+				align-self: center;
+				margin-left: 32px;
+			}
+			h5 {
+				font-size: 1.2rem;
+				font-family: 'Poppins', sans-serif;
+				font-weight: bold;
+				max-width: 60vw;
+			}
+		}
+		.right {
+			flex: 3;
+
+			h2 {
+				font-family: 'Poppins', sans-serif;
+				font-size: 2rem;
+				line-height: 2.5rem;
+				letter-spacing: 2px;
+				margin-top: 0.5rem;
+
+				@include desktop {
+					font-size: 3.75rem;
+					line-height: 5rem;
+					margin-top: 0;
+				}
+			}
+			// p {
+			// 	font-family: 'Poppins', sans-serif;
+			// 	font-size: 1rem;
+			// 	letter-spacing: 1px;
+			// 	line-height: 1.6;
+			// 	@include desktop {
+			// 		letter-spacing: 2px;
+			// 		line-height: 1.8;
+			// 	}
+			// }
+
+			.border {
+				height: 10px;
+				width: 80px;
+				background-color: $color-primary;
+				margin: 1.5rem 0 1.5rem 0;
+				@include desktop {
+					margin: 1rem 0 2rem 0;
+				}
+			}
+			@include desktop {
+				margin: 0 128px;
+			}
+		}
+	}
+}
+
+.button {
+	cursor: pointer;
+	margin: 32px 0;
+	height: 50px;
+	width: 220px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-primary;
+	transition: 0.2s;
+	@include btn-text-unselect;
+	p {
+		line-height: 0;
+		color: white;
+		font-weight: bold;
+		letter-spacing: 0.75px;
+	}
+	&:hover {
+		@include desktop {
+			background-color: darken($color-primary, 10%);
+		}
+	}
+	&:active {
+		background-color: lighten($color-primary, 10%);
+	}
+}

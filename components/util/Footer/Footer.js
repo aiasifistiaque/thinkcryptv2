@@ -1,75 +1,73 @@
-import { Heading, Stack, Flex, Text, Link, Center } from '@chakra-ui/react';
-import styled from '@emotion/styled';
 import React from 'react';
-import footerData from '../../../data/footerData';
-import { breakpoints } from '../../lib/constants';
+import styles from './Footer.module.css';
 
-const Container = styled(Flex)`
-	gap: 1rem;
-	padding: 64px 24px;
-	flex: 1;
-	@media (min-width: ${breakpoints.desktop}) {
-		padding: 64px 128px;
-	}
-`;
-
-const Sections = styled(Flex)`
-	flex: 1;
-	gap: 4rem;
-	justify-content: space-between;
-	flex-direction: column;
-
-	@media (min-width: ${breakpoints.desktop}) {
-		flex-direction: row;
-	}
-`;
+const data = [
+	{
+		heading: 'Navigation',
+		items: [
+			{ name: 'Home', href: '/' },
+			{ name: 'Portfolio', href: '/portfolio' },
+			{
+				name: 'Contact',
+				href: 'https://docs.google.com/forms/d/e/1FAIpQLSeu0GxkeIBfjuAXlPALET-5S1Dxs6JASbV2CSjv2Yv4YA1vZQ/viewform?usp=sf_link',
+			},
+		],
+	},
+	{
+		heading: 'Legal',
+		items: [
+			{ name: 'Privacy Policy', href: '' },
+			{ name: 'Terms of Service', href: '' },
+		],
+	},
+	{
+		heading: 'Socials',
+		items: [
+			{ name: 'Facebook', href: 'https://www.facebook.com/thinkCrypt' },
+			{ name: 'Instagram', href: 'https://www.instagram.com/thinkcrypt.io/' },
+		],
+	},
+];
 
 const Footer = () => {
-	const Section = ({ data }) => {
-		return (
-			<Stack spacing={4}>
-				<Heading size='sm'>{data.heading}</Heading>
-				<Stack spacing={2}>
-					{data.items.map((item, i) => (
-						<Link key={i} href={item.href}>
-							{item.name}
-						</Link>
-					))}
-				</Stack>
-			</Stack>
-		);
-	};
 	return (
-		<Stack bg='#f2f2f2'>
-			<Container>
-				<Sections>
-					<Stack>
-						<Heading size='md'>Contact Us</Heading>
-						<Stack spacing={0}>
-							<Text>thinkcrypt.io</Text>
-							<Text>House 42, Road 6,</Text>
-							<Text>Mohammadia Housing Soceity, Mohammadpur</Text>
-							<Text>Dhaka 1207, Bangladesh</Text>
-						</Stack>
-
-						<Stack spacing={0}>
-							<Text>Tel: (+88) 01828398225, 01799399555</Text>
-							<Text>Email: info@thinkcrypt.io</Text>
-						</Stack>
-					</Stack>
-					<Flex wrap='wrap' gap='5rem'>
-						{footerData.map((item, i) => (
+		<div className={styles.foot}>
+			<div className={styles.container}>
+				<div className={styles.sections}>
+					<div className={styles.section}>
+						<h6>Contact Us</h6>
+						<p>Tel: (+88) 01828398225, 01799399555</p>
+						<p>Email: info@thinkcrypt.io</p>
+						<p>Mohammadpur, Dhaka, Bangladesh</p>
+					</div>
+					<div className={styles.rightSections}>
+						{data.map((item, i) => (
 							<Section data={item} key={i} />
 						))}
-					</Flex>
-				</Sections>
-			</Container>
-			<Center p='4px 16px'>
-				<Text textAlign='center' color='gray.600' fontSize={12}>
-					{`Copyright ©2023`} | thinkcrypt.io | ALL RIGHTS RESERVED
-				</Text>
-			</Center>
-		</Stack>
+					</div>
+				</div>
+			</div>
+			<div className={styles.disclaimer}>
+				<p>
+					{`©2022`}, TestMate Ltd. - thinkcrypt.io is a concern of TestMate Ltd.
+					registered under RJSC, Bangladesh
+				</p>
+			</div>
+		</div>
+	);
+};
+
+const Section = ({ data }) => {
+	return (
+		<div className={styles.section}>
+			<h6>{data.heading}</h6>
+
+			{data.items.map((item, i) => (
+				<a key={i} href={item.href}>
+					{item.name}
+				</a>
+			))}
+		</div>
 	);
 };
 

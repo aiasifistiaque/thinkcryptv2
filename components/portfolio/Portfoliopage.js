@@ -1,17 +1,17 @@
 import React from 'react';
 import SectionHeading from '../home/sectionheading/SectionHeading';
 import Page from '../util/Page/Page';
+import styles from './Portfoliopage.module.css';
+import PortfolioContainer from './PortfolioContainer/PortfolioContainer';
 import PortfolioItem from './PortfolioItem/PortfolioItem';
-import { Heading, Stack, Flex, Grid } from '@chakra-ui/react';
-import styled from '@emotion/styled';
-import { breakpoints } from '../lib/constants';
+import Link from 'next/link';
 
 const data = [
 	{
 		src: '/portfolio/live-fresh.svg',
 		name: 'Live Fresh',
 		type: 'e-commerce',
-		href: 'https://livefreshbd.com/',
+		href: 'https://live-fresh.vercel.app/',
 	},
 	{
 		src: '/portfolio/netsooon.svg',
@@ -51,6 +51,12 @@ const data = [
 		type: 'iOs & Android App',
 		href: 'https://github.com/aiasifistiaque/weatherapp',
 	},
+	// {
+	// 	src: '/portfolio/home/3',
+	// 	name: 'Recipe Finder',
+	// 	type: 'iOs & Android App',
+	// 	href:''
+	// },
 
 	{
 		src: '/portfolio/home/3.jpg',
@@ -100,54 +106,31 @@ const data2 = [
 	},
 ];
 
-const Row = styled(Grid)`
-	grid-template-columns: 1fr;
-	gap: 1rem;
-	margin-top: 2rem;
-
-	@media (min-width: ${breakpoints.desktop}) {
-		flex-direction: row;
-		grid-template-columns: 1fr 1fr;
-		gap: 4rem;
-	}
-`;
-
-const PortfolioContainer = styled(Flex)`
-	background-color: whitesmoke;
-	min-height: 100vh;
-	padding: 24px;
-	flex-direction: column;
-
-	@media (min-width: ${breakpoints.desktop}) {
-		padding: 128px;
-	}
-`;
-
 const Portfoliopage = () => {
 	return (
 		<Page>
-			<Stack spacing={4}>
+			<div className={styles.container} style={{ marginTop: 64 }}>
 				<SectionHeading heading='All of Our Work' subHeading='Our Projects'>
 					We{`'`}re passionate about design, innovation, brilliant ideas and the
 					execution that brings it all together in one beautiful experience. If
 					you are too, call or send us an email to get started.
 				</SectionHeading>
 				<PortfolioContainer>
-					<Heading size='xl'>Our Work</Heading>
-					<Row>
-						<Stack spacing={10}>
+					<h2>Our Work</h2>
+					<div className={styles.row}>
+						<div className={styles.column}>
 							{data.map((item, i) => (
 								<PortfolioItem item={item} key={i} href='/project' />
 							))}
-						</Stack>
-						<Stack spacing={10}>
+						</div>
+						<div className={styles.coltwo}>
 							{data2.map((item, i) => (
 								<PortfolioItem item={item} key={i} href='/project' />
 							))}
-						</Stack>
-					</Row>
+						</div>
+					</div>
 				</PortfolioContainer>
-			</Stack>
+			</div>
 		</Page>
 	);
 };
